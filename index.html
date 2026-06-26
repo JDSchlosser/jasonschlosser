@@ -88,12 +88,16 @@ nav{background:rgba(24,27,33,1);border-bottom:1px solid var(--border);padding:0 
 .service-num{font-family:var(--serif);font-size:2rem;color:var(--gold-border);line-height:1;margin-bottom:0.75rem}
 .service-title{font-family:var(--sans);font-size:0.82rem;font-weight:500;letter-spacing:0.06em;color:var(--text);text-transform:uppercase;margin-bottom:0.6rem}
 .service-desc{font-size:0.86rem;color:var(--text-muted);line-height:1.75}
-.advisory-sub-label{display:block;font-family:var(--sans);font-size:0.72rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin:2rem 0 0.9rem}
-.work-options{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:2rem}
-.work-option{background:var(--surface);border:1px solid var(--border);padding:1.35rem;border-radius:2px;transition:border-color 0.2s,box-shadow 0.2s}
-.work-option:hover{border-color:var(--gold-border);box-shadow:0 4px 24px rgba(0,0,0,0.35)}
-.work-option-title{font-family:var(--sans);font-size:0.8rem;font-weight:500;letter-spacing:0.06em;color:var(--text);text-transform:uppercase;margin-bottom:0.55rem}
+.ways-work{margin-top:2.8rem;margin-bottom:1.25rem;padding:2.1rem;background:var(--surface2);border:1px solid var(--border);border-radius:2px}
+.ways-work .section-title{margin-bottom:1rem}
+.ways-work .divider{margin-bottom:1.8rem}
+.work-options{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1.6rem}
+.work-option{background:var(--surface);border:1px solid var(--border);border-top:2px solid var(--gold-border);padding:2.1rem 1.75rem 1.85rem;border-radius:2px;transition:border-color 0.2s,box-shadow 0.2s}
+.work-option:hover{border-color:var(--gold-border);box-shadow:0 6px 28px rgba(0,0,0,0.38)}
+.work-option-title{font-family:var(--sans);font-size:0.88rem;font-weight:500;letter-spacing:0.07em;color:var(--gold-light);text-transform:uppercase;margin-bottom:0.65rem}
 .work-option-desc{font-size:0.86rem;color:var(--text-muted);line-height:1.75}
+.ways-cta{text-align:center}
+.ways-cta-copy{font-size:0.93rem;color:var(--text-muted);margin-bottom:0.85rem}
 .advisory-footer{margin-top:2.5rem;padding:2rem;background:var(--gold-dim);border:1px solid var(--gold-border);border-radius:2px;max-width:700px}
 .advisory-footer p{font-family:var(--body);font-style:italic;font-size:1rem;color:var(--text-muted);line-height:1.85}
 .advisory-footer p strong{color:var(--text);font-style:normal;font-weight:500}
@@ -163,7 +167,8 @@ footer{background:#0e1014;padding:2rem;border-top:1px solid var(--border)}
   .hero-left{padding:3.5rem 2.5rem 3.5rem 3rem}
   .about-grid{grid-template-columns:1fr 1fr;gap:2.5rem}
   .services-grid{grid-template-columns:1fr 1fr;gap:1rem}
-  .work-options{grid-template-columns:1fr 1fr;gap:1rem}
+  .ways-work{padding:1.75rem}
+  .work-options{grid-template-columns:1fr;gap:1rem}
   .passion-grid{grid-template-columns:1fr 1fr;gap:1.25rem}
   .testimonial-grid{grid-template-columns:1fr;gap:1.25rem}
   .running-grid{grid-template-columns:1fr;gap:2rem}
@@ -209,6 +214,7 @@ footer{background:#0e1014;padding:2rem;border-top:1px solid var(--border)}
   .proof-band{grid-template-columns:1fr;gap:0.75rem}
   .services-grid{grid-template-columns:1fr;gap:1rem}
   .work-options{grid-template-columns:1fr;gap:1rem}
+  .ways-work{padding:1.5rem}
   .advisory-intro{font-size:0.95rem}
   .advisory-footer{padding:1.5rem}
 
@@ -397,12 +403,18 @@ footer{background:#0e1014;padding:2rem;border-top:1px solid var(--border)}
       <div class="service-card"><div class="service-num">03</div><div class="service-title">Performance &amp; Profitability</div><p class="service-desc">Getting underperforming properties healthy — tightening operations, bringing labor and costs in line, and growing revenue without losing what makes the place special.</p></div>
       <div class="service-card"><div class="service-num">04</div><div class="service-title">Technology That Works</div><p class="service-desc">Putting technology to work in ways that pay off — practical tools for staffing, reporting, and the daily grind, built around how your team really operates.</p></div>
     </div>
-    <div class="fade-in">
-      <span class="advisory-sub-label">Ways to work together</span>
+    <div class="ways-work fade-in">
+      <div class="section-label">Ways to work together</div>
+      <h3 class="section-title">Choose the support you need right now</h3>
+      <div class="divider"></div>
       <div class="work-options">
-        <div class="work-option"><div class="work-option-title">Advisory &amp; coaching</div><p class="work-option-desc">An ongoing thought partner for the big decisions. Retainer or by the conversation.</p></div>
+        <div class="work-option"><div class="work-option-title">Advisory &amp; coaching</div><p class="work-option-desc">An ongoing thought partner for the big decisions. Retainer, or by the conversation.</p></div>
         <div class="work-option"><div class="work-option-title">Fractional leadership</div><p class="work-option-desc">I step in to run a function — growth, sales, operations — for as long as you need it, then hand it back stronger.</p></div>
         <div class="work-option"><div class="work-option-title">Project work</div><p class="work-option-desc">A specific problem with a clear finish line: a turnaround, a launch, a team rebuilt.</p></div>
+      </div>
+      <div class="ways-cta">
+        <p class="ways-cta-copy">Not sure which fits? Let's figure it out together.</p>
+        <a class="btn-primary" href="#contact">Start a conversation</a>
       </div>
     </div>
     <div class="advisory-footer fade-in">
