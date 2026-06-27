@@ -34,8 +34,8 @@ nav{background:rgba(24,27,33,1);border-bottom:1px solid var(--border);padding:0 
 .nav-links a{font-family:var(--sans);font-size:0.85rem;font-weight:500;letter-spacing:0.07em;text-transform:uppercase;color:var(--text-muted);text-decoration:none;transition:color 0.2s}
 .nav-links a:hover{color:var(--gold)}
 
-.hero{display:grid;grid-template-columns:1fr 1fr}
-.hero-left{display:flex;flex-direction:column;justify-content:center;padding:5rem 4rem 5rem 5rem;background:var(--bg)}
+.hero{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;min-height:clamp(620px,82vh,920px)}
+.hero-left{display:flex;flex-direction:column;justify-content:center;padding:clamp(4rem,6vw,6rem) clamp(3rem,4.5vw,5rem);background:var(--bg)}
 .hero-eyebrow{font-family:var(--sans);font-size:0.72rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
 .hero-name{font-family:var(--serif);font-size:clamp(2.4rem,4vw,3.8rem);line-height:1.1;color:var(--text);margin-bottom:1.25rem}
 .hero-name em{color:var(--gold);font-style:italic}
@@ -45,8 +45,8 @@ nav{background:rgba(24,27,33,1);border-bottom:1px solid var(--border);padding:0 
 .btn-primary:hover{background:var(--gold-light)}
 .btn-outline{font-family:var(--sans);font-size:0.8rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;background:transparent;color:var(--text);border:1.5px solid var(--border);padding:0.75rem 1.75rem;border-radius:2px;cursor:pointer;text-decoration:none;transition:border-color 0.2s,color 0.2s;display:inline-block}
 .btn-outline:hover{border-color:var(--gold);color:var(--gold)}
-.hero-right{position:relative;overflow:hidden;min-height:560px}
-.hero-right img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.hero-right,.hero-photo{position:relative;overflow:hidden;min-height:560px;height:100%}
+.hero-right img,.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center 18%;display:block}
 .hero-right-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(24,27,33,0.82) 0%,rgba(24,27,33,0.2) 50%,transparent 100%);display:flex;align-items:flex-end;padding:2.5rem}
 .hero-quote{color:rgba(255,255,255,0.92);font-family:var(--serif);font-size:1.7rem;font-style:italic;line-height:1.5;max-width:420px}
 .hero-quote cite{display:block;margin-top:1rem;font-family:var(--sans);font-size:0.82rem;font-style:normal;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5)}
@@ -163,7 +163,8 @@ footer{background:#0e1014;padding:2rem;border-top:1px solid var(--border)}
 /* ── TABLET (iPad, up to 1024px) ── */
 @media (max-width: 1024px) {
   .hero{grid-template-columns:1fr 1fr}
-  .hero-left{padding:3.5rem 2.5rem 3.5rem 3rem}
+  .hero-left{padding:3.5rem 2.75rem}
+  .hero-right,.hero-photo{min-height:500px}
   .about-grid{grid-template-columns:1fr 1fr;gap:2.5rem}
   .services-grid{grid-template-columns:1fr 1fr;gap:1rem}
   .ways-work{padding:1.75rem}
@@ -186,11 +187,12 @@ footer{background:#0e1014;padding:2rem;border-top:1px solid var(--border)}
   .nav-links a{font-size:0.72rem;letter-spacing:0.04em}
 
   /* Hero — stack vertically */
-  .hero{grid-template-columns:1fr;display:flex;flex-direction:column-reverse}
+  .hero{grid-template-columns:1fr;display:flex;flex-direction:column-reverse;min-height:auto}
   .hero-left{padding:2.5rem 1.5rem 3rem;order:2}
   .hero-name{font-size:2.6rem}
   .hero-tagline{font-size:0.95rem;max-width:100%}
-  .hero-photo{min-height:280px;order:1}
+  .hero-right,.hero-photo{min-height:360px;max-height:420px;order:1;overflow:hidden;background:var(--bg)}
+  .hero-right img,.hero-photo img{object-fit:contain;object-position:center top}
   .hero-ctas{flex-direction:column;gap:0.75rem}
   .btn-primary,.btn-outline{text-align:center;padding:0.9rem 1.5rem;width:100%}
 
@@ -261,9 +263,8 @@ footer{background:#0e1014;padding:2rem;border-top:1px solid var(--border)}
   .nav-logo { font-size: 1.2rem; text-align: center; }
 }
 
-@media (max-width: 768px) {
-  .hero-photo { min-height: 240px !important; max-height: 300px; overflow: hidden; }
-  .hero-photo img { object-position: 60% 10% !important; }
+@media (min-width: 390px) and (max-width: 430px) {
+  .hero-right,.hero-photo{min-height:400px;max-height:440px}
 }
 </style>
 </head>
